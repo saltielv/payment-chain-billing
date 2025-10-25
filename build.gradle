@@ -1,7 +1,7 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '3.5.7'
-	id 'io.spring.dependency-management' version '1.1.7'
+	alias(libs.plugins.springBoot)
+    alias(libs.plugins.springDependencyMgmt)
 }
 
 group = 'com.paymentchain.business'
@@ -25,13 +25,13 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	compileOnly 'org.projectlombok:lombok'
-	runtimeOnly 'com.h2database:h2'
-	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation(libs.springBootStarterDataJpa)
+    implementation(libs.springBootStarterWeb)
+    compileOnly(libs.lombok)
+    runtimeOnly(libs.h2)
+    annotationProcessor(libs.lombok)
+    testImplementation(libs.springBootStarterTest)
+    testRuntimeOnly(libs.junitPlatformLauncher)
 }
 
 tasks.named('test') {
