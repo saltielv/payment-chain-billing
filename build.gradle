@@ -2,6 +2,7 @@ plugins {
 	id 'java'
 	alias(libs.plugins.springBoot)
     alias(libs.plugins.springDependencyMgmt)
+    alias(libs.plugins.spotless)
 }
 
 group = 'com.paymentchain.business'
@@ -32,6 +33,12 @@ dependencies {
     annotationProcessor(libs.lombok)
     testImplementation(libs.springBootStarterTest)
     testRuntimeOnly(libs.junitPlatformLauncher)
+}
+
+spotless {
+    java {
+        googleJavaFormat(libs.versions.googleJavaFormat.get())
+    }
 }
 
 tasks.named('test') {
