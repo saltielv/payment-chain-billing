@@ -44,3 +44,15 @@ spotless {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+tasks.register("installGitHooks", Copy) {
+    group = "git"
+    description = "Copies custom git hooks from `.githooks` to `.git/hooks`"
+    from '.githooks'
+    into '.git/hooks'
+    filePermissions {
+        unix('rwxr-xr-x') //Sets file mode to 755
+    }
+
+}
+
