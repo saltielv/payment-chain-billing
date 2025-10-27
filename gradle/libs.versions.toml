@@ -2,7 +2,7 @@
 [versions]
 springBoot = "3.5.7"
 springDependencyMgmt = "1.1.7"
-lombok = "1.18.28"
+lombok = "1.18.42"
 spotless = "8.0.0"
 googleJavaFormat = "1.30.0"
 
