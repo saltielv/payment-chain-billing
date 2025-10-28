@@ -4,8 +4,11 @@ import com.paymentchain.business.billing.application.dto.InvoiceResponseDTO;
 import com.paymentchain.business.billing.domain.Invoice;
 import java.util.List;
 import org.mapstruct.InheritInverseConfiguration;
+import org.mapstruct.InjectionStrategy;
+import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
+@Mapper(componentModel = "spring", injectionStrategy = InjectionStrategy.CONSTRUCTOR)
 public interface InvoiceResponseMapper {
 
   @Mapping(source = "id", target = "invoiceId")

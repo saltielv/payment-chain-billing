@@ -1,7 +1,8 @@
 package com.paymentchain.business.billing.presentation.controllers;
 
+import com.paymentchain.business.billing.application.dto.InvoiceRequestDTO;
+import com.paymentchain.business.billing.application.dto.InvoiceResponseDTO;
 import com.paymentchain.business.billing.application.port.in.CreateInvoiceUseCase;
-import com.paymentchain.business.billing.domain.Invoice;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,7 +17,7 @@ public class InvoiceController {
   private final CreateInvoiceUseCase createInvoiceUseCase;
 
   @PostMapping
-  public Invoice createInvoice(@RequestBody Invoice request) {
+  public InvoiceResponseDTO createInvoice(@RequestBody InvoiceRequestDTO request) {
     return createInvoiceUseCase.createInvoice(request);
   }
 }
