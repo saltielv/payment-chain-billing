@@ -1,13 +1,13 @@
 package com.paymentchain.business.billing.adapter.out.persistence;
 
-import com.paymentchain.business.billing.application.port.out.SaveInvoicePort;
+import com.paymentchain.business.billing.application.port.out.InvoicePort;
 import com.paymentchain.business.billing.domain.Invoice;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 @AllArgsConstructor
 @Repository
-public class InvoicePersistenceAdapter implements SaveInvoicePort {
+public class InvoicePersistenceAdapter implements InvoicePort {
 
   private final SpringJpaInvoiceRepository invoiceRepository;
 
