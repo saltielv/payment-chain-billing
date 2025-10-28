@@ -1,7 +1,9 @@
-package com.paymentchain.business.billing.adapter.out.persistence;
+package com.paymentchain.business.billing.presentation.gateways;
 
 import com.paymentchain.business.billing.application.port.out.InvoicePort;
 import com.paymentchain.business.billing.domain.Invoice;
+import com.paymentchain.business.billing.infrastructure.persistence.InvoiceEntity;
+import com.paymentchain.business.billing.infrastructure.persistence.SpringJpaInvoiceRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
 

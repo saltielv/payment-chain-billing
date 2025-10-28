@@ -1,4 +1,4 @@
-package com.paymentchain.business.billing.adapter.out.persistence;
+package com.paymentchain.business.billing.infrastructure.persistence;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

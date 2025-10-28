@@ -1,4 +1,4 @@
-package com.paymentchain.business.billing.adapter.in.web;
+package com.paymentchain.business.billing.presentation.controllers;
 
 import com.paymentchain.business.billing.application.port.in.CreateInvoiceUseCase;
 import com.paymentchain.business.billing.domain.Invoice;
