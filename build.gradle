@@ -28,6 +28,8 @@ repositories {
 dependencies {
     implementation(libs.springBootStarterDataJpa)
     implementation(libs.springBootStarterWeb)
+    implementation(libs.mapStruct)
+    annotationProcessor(libs.mapStructProcessor)
     compileOnly(libs.lombok)
     runtimeOnly(libs.h2)
     annotationProcessor(libs.lombok)

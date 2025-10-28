@@ -5,6 +5,7 @@ springDependencyMgmt = "1.1.7"
 lombok = "1.18.42"
 spotless = "8.0.0"
 googleJavaFormat = "1.30.0"
+mapStruct = "1.6.3"
 
 [plugins]
 springBoot= { id = "org.springframework.boot", version.ref = "springBoot" }
@@ -18,3 +19,5 @@ lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
 h2 = { module = "com.h2database:h2" }
 springBootStarterTest = { module = "org.springframework.boot:spring-boot-starter-test" }
 junitPlatformLauncher = { module = "org.junit.platform:junit-platform-launcher" }
+mapStruct = { module = "org.mapstruct:mapstruct", version.ref = "mapStruct" }
+mapStructProcessor = { module = "org.mapstruct:mapstruct-processor", version.ref = "mapStruct" }
